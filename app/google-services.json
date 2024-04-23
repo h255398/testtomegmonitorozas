@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "515531807151",
+    "project_id": "testtomhh",
+    "storage_bucket": "testtomhh.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:515531807151:android:a967e62b2d057b26b8375a",
+        "android_client_info": {
+          "package_name": "com.example.testtomegmonitorozas"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcV1-PmaT5_1ZuJ4vzReOyCnoAuaAPjj0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

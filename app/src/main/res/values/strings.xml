@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Testtomegmonitorozas</string>
+    <string name="email_address">Email cím</string>
+    <string name="password">Jelszó</string>
+    <string name="login">Bejelentkezés</string>
+    <string name="registration">Regisztráció</string>
+    <string name="password_again">Jelszó újra</string>
+    <string name="kg">Kg</string>
+    <string name="email">Email cím:</string>
+    <string name="ures">placeholder</string>
+    <string name="weight_now">Súly jelenleg:</string>
+    <string name="send">Küldés</string>
+    <string name="cancel">Mégse</string>
+    <string name="new_weight">Új súly</string>
+    <string name="delete">Törlés</string>
+    <string name="sulyok">Súlyok</string>
+    <string name="log_out">Kijelentkezés</string>
+    <string name="profil">Profil</string>
+    <string name="home">Főoldal</string>
+</resources>
