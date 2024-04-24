@@ -11,6 +11,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -77,6 +79,9 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     public void register(View view) {
+        Animation animSlideIn = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_in);
+        view.startAnimation(animSlideIn);
+
         String password = passwordEditText.getText().toString();
         String email = userEmailEditText.getText().toString();
         String passwordAgain = passwordAgainEditText.getText().toString();
@@ -129,6 +134,11 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     public void cancel(View view) {
+
+        Animation animSlideIn = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_in);
+        view.startAnimation(animSlideIn);
+
+
         finish();
     }
 

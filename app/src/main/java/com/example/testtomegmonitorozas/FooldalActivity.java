@@ -60,6 +60,29 @@ public class FooldalActivity extends AppCompatActivity {
                 });
     }
 
+    /*
+    * private void loadWeightsFromDatabase() {
+    db.collection("User")
+            .whereEqualTo("email", mAuth.getCurrentUser().getEmail())
+            .get()
+            .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                    if (task.isSuccessful()) {
+                        for (QueryDocumentSnapshot document : task.getResult()) {
+                            weights = (ArrayList<Long>) document.get("suly");
+                            loadWeights(weights);
+                        }
+                    } else {
+                        Toast.makeText(FooldalActivity.this, "Hiba történt az adatbázis elérésénél!", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+}
+}
+
+    * */
+
     private void loadWeights(ArrayList<Long> weights) {
         TableRow headerRow = new TableRow(this);
         TableRow.LayoutParams lpHeader = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT);
@@ -97,7 +120,7 @@ public class FooldalActivity extends AppCompatActivity {
             TextView deleteView = new TextView(this);
             deleteView.setText("Törlés");
             deleteView.setPadding(5, 5, 5, 5);
-            deleteView.setTextColor(getResources().getColor(android.R.color.holo_red_dark)); // Változtasd a színt az igényeid szerint
+            deleteView.setTextColor(getResources().getColor(android.R.color.holo_red_dark)); // szin mert why not
             deleteView.setGravity(Gravity.CENTER);
             deleteView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -135,6 +158,28 @@ public class FooldalActivity extends AppCompatActivity {
                     }
                 });
     }
+
+    /*
+    * private void removeFromDatabase(long weightToDelete) {
+    db.collection("User")
+            .document(mAuth.getCurrentUser().getEmail())
+            .update("suly", weights)
+            .whereEqualTo("email", mAuth.getCurrentUser().getEmail()) // WHERE
+            .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                    if (task.isSuccessful()) {
+                        Toast.makeText(FooldalActivity.this, "Súly sikeresen törölve az adatbázisból!", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(FooldalActivity.this, "Hiba történt a súly törlésekor az adatbázisból!", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+}
+
+}
+
+    * */
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfilActivity">
+
+ <androidx.constraintlayout.widget.ConstraintLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content">
+
+  <!-- <androidx.appcompat.widget.Toolbar
+       android:id="@+id/toolbar"
+       android:layout_width="match_parent"
+       android:layout_height="?attr/actionBarSize"
+       android:background="?attr/colorPrimary"
+       android:elevation="4dp"
+       android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+       app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>  -->
+
+  <TextView
+      android:id="@+id/emailTextView"
+      android:layout_width="77dp"
+      android:layout_height="49dp"
+      android:layout_alignParentStart="true"
+      android:layout_alignParentEnd="true"
+      android:layout_marginStart="196dp"
+      android:layout_marginTop="92dp"
+      android:text="@string/email"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+      android:id="@+id/emailPlaceholder"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="92dp"
+      android:text="@string/ures"
+      app:layout_constraintStart_toEndOf="@id/emailTextView"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+      android:id="@+id/sulyTextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/emailTextView"
+      android:layout_marginStart="@dimen/default_margin"
+      android:layout_marginTop="@dimen/default_margin"
+      android:text="@string/weight_now"
+      app:layout_constraintBottom_toTopOf="@id/sulyEditText"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.279"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/emailTextView" />
+
+
+  <TextView
+      android:id="@+id/sulyPlaceholder"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="12dp"
+      android:text="@string/ures"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toEndOf="@id/sulyTextView"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.504" />
+
+  <EditText
+      android:id="@+id/sulyEditText"
+      android:layout_width="222dp"
+      android:layout_height="55dp"
+      android:layout_marginStart="196dp"
+      android:layout_marginTop="28dp"
+      android:ems="10"
+      android:hint="@string/new_weight"
+      android:inputType="number"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/sulyTextView" />
+
+  <Button
+      android:id="@+id/elkuldom"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="264dp"
+      android:layout_marginTop="28dp"
+      android:backgroundTint="#8BC34A"
+      android:onClick="send"
+      android:text="@string/send"
+      app:iconTint="#8BC34A"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/sulyEditText" />
+
+ </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

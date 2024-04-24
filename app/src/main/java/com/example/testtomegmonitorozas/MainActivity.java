@@ -8,6 +8,8 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -42,6 +44,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void register(View view) {
+
+        Animation animFadeIn = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
+        view.startAnimation(animFadeIn);
+
         Intent intent = new Intent(this, RegisterActivity.class);
         intent.putExtra("SECRET_KEY", SECRET_KEY);
 
@@ -49,6 +55,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void login(View view) {
+
+        Animation animFadeIn = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
+        view.startAnimation(animFadeIn);
+
         String userEmail = userEmailET.getText().toString();
         String password = passwordET.getText().toString();
 
